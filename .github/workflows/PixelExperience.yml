@@ -116,9 +116,9 @@ jobs:
           echo "=========================Make=========================="
           make O=out CC="ccache clang" CXX="ccache clang++" ARCH=arm64 CROSS_COMPILE=$CLANG_PATH/bin/aarch64-linux-gnu- CROSS_COMPILE_ARM32=$CLANG_PATH/bin/arm-linux-gnueabi- LD=ld.lld $KERNEL_DEFCONFIG
           # Disable LTO
-          if [[ $(echo "$(awk '/MemTotal/ {print $2}' /proc/meminfo) < 16000000" | bc -l) -eq 1 ]]; then
+          # if [[ $(echo "$(awk '/MemTotal/ {print $2}' /proc/meminfo) < 16000000" | bc -l) -eq 1 ]]; then
               scripts/config --file out/.config -d LTO -d LTO_CLANG -d THINLTO -e LTO_NONE
-          fi
+          # fi
           make O=out CC="ccache clang" CXX="ccache clang++" ARCH=arm64 -j`nproc` CROSS_COMPILE=$CLANG_PATH/bin/aarch64-linux-gnu- CROSS_COMPILE_ARM32=$CLANG_PATH/bin/arm-linux-gnueabi- LD=ld.lld 2>&1 | tee kernel.log
 
       
@@ -147,7 +147,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "kernel/out/arch/arm64/boot/PE-martini-${{ env.TAG_NAME }}.zip"
-          tag: "PE-martini-${{ env.TAG_NAME }}"
+          tag: "ONEPLUS9RT-${{ env.TAG_NAME }}"
           name: "Pixel Experience martini ${{ env.TAG_NAME }}"
           allowUpdates: true
           replacesArtifacts: true
