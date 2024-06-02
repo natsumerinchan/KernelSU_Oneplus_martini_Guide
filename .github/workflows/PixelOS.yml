@@ -125,7 +125,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/kernel
           export KERNEL_PATH=$PWD
-          git clone https://gitlab.com/inferno0230/AnyKernel3 --depth=1 $KERNEL_PATH/AnyKernel3
+          git clone https://gitlab.com/inferno0230/AnyKernel3.git --depth=1 $KERNEL_PATH/AnyKernel3
           if test -e $KERNEL_PATH/out/arch/arm64/boot/Image && test -d $KERNEL_PATH/AnyKernel3; then
              zip_name="PixelOS-martini-${{ env.TAG_NAME }}.zip"
              cd $KERNEL_PATH/AnyKernel3
