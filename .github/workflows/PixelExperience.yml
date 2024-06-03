@@ -88,7 +88,7 @@ jobs:
       - name: Git kernel
         run: |
           git clone "${{ github.event.inputs.KERNEL_SOURCE }}" -b "${{ github.event.inputs.KERNEL_SOURCE_BRANCH }}" kernel --depth=1
-          echo "TAG_NAME=PE-v5.4.$(grep "^SUBLEVEL =" kernel/Makefile | awk '{print $3}')-$(date +"%Y%m%d")" >> $GITHUB_ENV
+          echo "TAG_NAME=v5.4.$(grep "^SUBLEVEL =" kernel/Makefile | awk '{print $3}')-$(date +"%Y%m%d")" >> $GITHUB_ENV
 
       - name: Setup KernelSU
         if: github.event.inputs.KERNELSU_CONFIG == 'true'
@@ -147,7 +147,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "kernel/out/arch/arm64/boot/PE-martini-${{ env.TAG_NAME }}.zip"
-          tag: "ONEPLUS9RT-${{ env.TAG_NAME }}"
+          tag: "ONEPLUS9RT-PE-${{ env.TAG_NAME }}"
           name: "Pixel Experience martini ${{ env.TAG_NAME }}"
           allowUpdates: true
           replacesArtifacts: true
