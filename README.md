@@ -14,6 +14,7 @@ Guide of compile KernelSU for Oneplus 9RT(martini)[MT2110/MT2111]
 |:--:|:--:|:--:|:--:|:--:|
 | Pixel Experience | [PixelExperience-Devices/kernel_oneplus_martini](https://github.com/PixelExperience-Devices/kernel_oneplus_martini.git) | thirteen | [inferno0230](https://github.com/inferno0230) | Unsupport OOS and ColorOS. |
 | Pixel OS | [beet-stuffs/android_kernel_oneplus_sm8350](https://github.com/beet-stuffs/android_kernel_oneplus_sm8350.git) | fourteen-qpr2 | [bheatleyyy](https://github.com/bheatleyyy) | Unsupport OOS and ColorOS. |
+| Pixel OS SUSFS | [natsumerinchan/android_kernel_oneplus_sm8350](https://github.com/natsumerinchan/android_kernel_oneplus_sm8350.git) | fourteen-qpr2 | [bheatleyyy](https://github.com/bheatleyyy) | Based on [beet-stuffs/android_kernel_oneplus_sm8350](https://github.com/beet-stuffs/android_kernel_oneplus_sm8350.git) and modify by me，add [SUSFS](https://gitlab.com/simonpunk/susfs4ksu) and `path_umount` features.Unsupport OOS and ColorOS. |
 
 ## How to build
 ### 1.Github Action

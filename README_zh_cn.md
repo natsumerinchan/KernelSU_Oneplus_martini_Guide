@@ -14,6 +14,7 @@
 |:--:|:--:|:--:|:--:|:--:|
 | Pixel Experience | [PixelExperience-Devices/kernel_oneplus_martini](https://github.com/PixelExperience-Devices/kernel_oneplus_martini.git) | thirteen | [inferno0230](https://github.com/inferno0230) | 不支持ColorOS和OOS。 |
 | Pixel OS | [beet-stuffs/android_kernel_oneplus_sm8350](https://github.com/beet-stuffs/android_kernel_oneplus_sm8350.git) | fourteen-qpr2 | [bheatleyyy](https://github.com/bheatleyyy) | 不支持ColorOS和OOS。 |
+| Pixel OS SUSFS | [natsumerinchan/android_kernel_oneplus_sm8350](https://github.com/natsumerinchan/android_kernel_oneplus_sm8350.git) | fourteen-qpr2 | [bheatleyyy](https://github.com/bheatleyyy) | 由本人基于[beet-stuffs/android_kernel_oneplus_sm8350](https://github.com/beet-stuffs/android_kernel_oneplus_sm8350.git)修改，添加了[SUSFS](https://gitlab.com/simonpunk/susfs4ksu)和path_umount功能。不支持ColorOS和OOS。 |
 
 ## 如何编译
 ### 1.Github Action
