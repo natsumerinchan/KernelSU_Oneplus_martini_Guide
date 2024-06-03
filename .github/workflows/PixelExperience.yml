@@ -38,7 +38,7 @@ on:
         KERNELSU_TAG:
           description: 'Choose KernelSU branch or tag'
           required: false
-          default: "v0.9.5"
+          default: "a943528d8203f2bcd524bddb273fb3c00905ea67"
           type: string
 
 jobs:
