@@ -136,7 +136,7 @@ jobs:
           fi
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: PixelOS-SUSFS-martini-${{ env.TAG_NAME }}
           path: |
